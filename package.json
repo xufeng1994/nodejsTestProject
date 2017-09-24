@@ -1,0 +1,27 @@
+{
+  "name": "nodejstestproject",
+  "version": "1.0.0",
+  "description": "正式的nodejs测试项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imzengyang/Cnodejs-Test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imzengyang/Cnodejs-Test/issues"
+  },
+  "homepage": "https://github.com/imzengyang/Cnodejs-Test#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "chromedriver": "^2.32.3",
+    "mocha": "^3.5.3",
+    "mochawesome": "^2.3.1",
+    "mongodb": "^2.2.31",
+    "selenium-webdriver": "^3.5.0"
+  }
+}
