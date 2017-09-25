@@ -13,3 +13,4 @@ let userRegister = async function(web){
 }
 
 module.expots = userlogin;
+module.expots = userRegister;
