@@ -20,4 +20,3 @@ let activeUser = function (user, done) {
     });
 }
 module.exports.activeUser = activeUser;
-activeUser("1505916630779")

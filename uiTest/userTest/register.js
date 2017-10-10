@@ -19,7 +19,7 @@ let loginPage = require('../../config/uiconfig/loginPage')
 let indexPage = require('../../config/uiconfig/indexPage')
 
 let app = require('../../config/app.config')
-let uiAction = require('../../common/ui/uiaction')
+let uiAction = require('../../common/ui/uiAction')
 let dbAction = require('../../common/ui/db')
 let web;
 
@@ -34,12 +34,13 @@ describe('注册功能', function () {
     })
 
     afterEach('tackscreenshot', async function () {
-        //todo
+        await uiAction.saveScreenShots(web);
+        await web.manage().deleteAllCookies();
     })
 
     after(' close browser', async function () {
-        await web.manage().deleteAllCookies();
-        // return await web.quit();
+        //await web.manage().deleteAllCookies();
+        return await web.quit();
     })
 
 
@@ -55,7 +56,7 @@ describe('注册功能', function () {
         // 验证页面中的元素是否存在
         return assert.ok(web.findElement({ css: "#content > div > div.header > ul > li.active" }));
     })
-    describe('注册信息合法值验证', function () {
+    describe.only('注册信息合法值验证', function () {
         it('两次密码不一致 应该收到<两次密码输入不一致。>提示', async function () {
             await uiAction.userRegister(web, "imzack", "123456", "654321", "imzack@163.com")
             let errortip = await web.findElement(registerPage.errortip).getText();

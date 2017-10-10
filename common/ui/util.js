@@ -19,5 +19,5 @@ let getScreenshotsDir = function () {
     }
     return screenShotDir;
 }
-module.exports = getrootPath;
-module.exports = getScreenshotsDir;
+module.exports.getrootPath= getrootPath;
+module.exports.getScreenshotsDir = getScreenshotsDir;

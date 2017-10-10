@@ -34,3 +34,4 @@ let saveScreenShots = async function (web){
 
 module.exports.userLogin = userLogin;
 module.exports.userRegister = userRegister;
+module.exports.saveScreenShots = saveScreenShots;

@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "login": "mocha uiTest/userTest/login.js --reporter mochawesome",
+    "register": "mocha uiTest/userTest/register.js --reporter mochawesome",
+    "multipe": "mocha uiTest/userTest/multipe.js --reporter mochawesome",
     "uitest": "mocha uiTest/**/*.js --reporter mochawesome",
     "apitest": "mocha apiTest/**/*.js --reporter mochawesome"
   },
