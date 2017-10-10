@@ -4,7 +4,9 @@
   "description": "正式的nodejs测试项目",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uitest": "mocha uiTest/**/*.js --reporter mochawesome",
+    "apitest": "mocha apiTest/**/*.js --reporter mochawesome"
   },
   "repository": {
     "type": "git",
