@@ -56,7 +56,7 @@ describe('注册功能', function () {
         // 验证页面中的元素是否存在
         return assert.ok(web.findElement({ css: "#content > div > div.header > ul > li.active" }));
     })
-    describe.only('注册信息合法值验证', function () {
+    describe('注册信息合法值验证', function () {
         it('两次密码不一致 应该收到<两次密码输入不一致。>提示', async function () {
             await uiAction.userRegister(web, "imzack", "123456", "654321", "imzack@163.com")
             let errortip = await web.findElement(registerPage.errortip).getText();
@@ -73,7 +73,7 @@ describe('注册功能', function () {
             await uiAction.userRegister(web, "imzack", "123456", "123456", "imzack@163.com")
             let errortip = await web.findElement(registerPage.errortip).getText();
             //用户名或邮箱已被使用。
-            return assert.ok(errortip.indexOf("用户名或邮箱已被使用。"));
+            return assert.ok(errortip.indexOf("用户名或邮箱已被使用。")>-1);
         })
     })
     it('注册成功后是否显示激活提示信息', async function () {
@@ -107,15 +107,7 @@ describe('注册功能', function () {
         return assert.equal(assertUserName, nowdate)
     })
     it('注册窗口与注册窗口是否可以正常切换', async function () {
-
+        // 该项目不支持   todo
     })
 
-})
-
-describe.skip('testcase', function () {
-    it.only("one", function () {
-        let nowdate = new Date().valueOf();
-        let a = `helloworld '${nowdate}'`
-        console.log(a)
-    })
 })

@@ -7,5 +7,8 @@ module.exports = {
     },
     username:{
         css:'.user_card .user_name'
+    },
+    topicButton:{
+        className: "span-success"
     }
 }
