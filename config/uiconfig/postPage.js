@@ -38,7 +38,7 @@ module.exports = {
         className: "eicon-image"
     },
     submit: {
-        className: "span-primary submit_btn"
+        css: '//*[@id="create_topic_form"]/fieldset/div/div/div[4]/input'
     }
 
 
