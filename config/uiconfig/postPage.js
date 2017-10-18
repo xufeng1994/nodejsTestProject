@@ -22,6 +22,7 @@ module.exports = {
     textArea:{
         xpath:'//*[@id="create_topic_form"]/fieldset/div/div/div[2]/div[6]/div[2]'
     },
+    
     link: {
         className: "eicon-link",
         title:{
@@ -35,10 +36,13 @@ module.exports = {
         }
     },
     image: {
-        className: "eicon-image"
+        className:"eicon-image",
+        file:{
+            name :'file'
+        }
     },
     submit: {
-        css: '//*[@id="create_topic_form"]/fieldset/div/div/div[4]/input'
+        xpath: '//*[@id="create_topic_form"]/fieldset/div/div/div[4]/input'
     }
 
 

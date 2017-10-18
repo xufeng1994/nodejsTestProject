@@ -9,7 +9,7 @@ let util = require('./util')
 let xufeng =userinfo.xufeng
 
 let userLogin = async function(web,userName,passWord){
-    await web.get(app.webUrl);
+    await web.get(app.baseUrl);
     await web.findElement(indexpage.loginhref).click();
     await web.findElement(loginPage.username).sendKeys(userName);
     await web.findElement(loginPage.password).sendKeys(passWord);
@@ -17,7 +17,7 @@ let userLogin = async function(web,userName,passWord){
 }
 
 let userRegister = async function (web,loginname,pass,re_pass,email){
-    await web.get(app.webUrl)
+    await web.get(app.baseUrl)
     await web.findElement(registerPage.registerUrl).click();
     await web.findElement(registerPage.loginName).sendKeys(loginname);
     await web.findElement(registerPage.pass).sendKeys(pass);
